@@ -1,0 +1,32 @@
+Main Page:
+    - navbar (hidden background when at top)
+    - showcase
+    - What you will learn (link to Courses page) (uses icons)
+    - average rating, students, courses taught (uses icons)
+    - Who teaches you (group picture & link to Our Teachers page)
+    - pictures (2x8)
+    - (reviews)
+    - footer
+
+Our Teachers Page:
+    - List of all staff members (pictures of random people)
+
+Our Courses Page:
+    - css grid of courses (6 courses)
+    - dynamic sign up state
+
+Contact Us:
+    - contact form
+    - contact information (uses icons)
+
+
+Color Scheme:
+    - primary: #B52E2A
+    - secondary: #2AB1B5
+    - dark: #333333
+    - medium: #555555
+    - light: #f4f4f4
+    - white: #ffffff
+    - warning: #F7A510
+    - danger: #FF4428
+    - success: #4CB240
