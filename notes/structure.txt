@@ -24,9 +24,8 @@ Color Scheme:
     - primary: #B52E2A
     - secondary: #2AB1B5
     - dark: #333333
-    - medium: #555555
+    - medium: #66666
     - light: #f4f4f4
-    - white: #ffffff
     - warning: #F7A510
     - danger: #FF4428
     - success: #4CB240

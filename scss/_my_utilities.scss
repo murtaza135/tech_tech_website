@@ -1,0 +1,125 @@
+// General
+// .card {
+
+// }
+
+
+// Text
+.title {
+    font-size: 2rem;
+    display: block;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+}
+
+.text {
+    &-primary {
+        color: $primary-color;
+    }
+
+    &-secondary {
+        color: $secondary-color;
+    }
+
+    &-dark {
+        color: $dark-color;
+    }
+
+    &-medium {
+        color: $medium-color;
+    }
+
+    &-light {
+        color: $light-color;
+    }
+}
+
+
+// Backgrounds
+.bg {
+    &-primary {
+        background: $primary-color;
+        color: set-text-color($primary-color);
+    }
+
+    &-secondary {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+
+    &-dark {
+        background: $dark-color;
+        color: set-text-color($dark-color);
+    }
+
+    &-medium {
+        background: $medium-color;
+        color: set-text-color($medium-color);
+    }
+
+    &-light {
+        background: $light-color;
+        color: set-text-color($light-color);
+    }
+}
+
+
+// Lines
+.line {
+    height: 2px;
+    width: 7rem;
+    background: $primary-color;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+
+// Buttons
+%btn-shared {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    transition: all 0.5s;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn {
+    &-primary {
+        @extend %btn-shared;
+        background: $primary-color;
+        color: set-text-color($primary-color);
+    }
+
+    &-secondary {
+        @extend %btn-shared;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+
+    &-dark {
+        @extend %btn-shared;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+    }
+
+    &-medium {
+        @extend %btn-shared;
+        background: $medium-color;
+        color: set-text-color($medium-color);
+    }
+
+    &-light {
+        @extend %btn-shared;
+        background: $light-color;
+        color: set-text-color($light-color);
+    }
+}
+

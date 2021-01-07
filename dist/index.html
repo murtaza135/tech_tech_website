@@ -3,12 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <title></title>
 </head>
 <body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container">
+            <nav id="navbar">
+                <div id="logo">
+                    <a href="index.html">Teach<span class="logo-color">Tech</span></a>
+                </div>
+
+                <ul class="nav-options">
+                    <li class="nav-option-active"><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="teachers.html">Teachers</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div id="showcase">
+                <h1>Welcome to Teach<span class="text-primary">Tech</span></h1>
+                <p class="subtitle pb-3">
+                    <span class="text-primary">Learn</span>
+                    <span class="text-typer" data-wait="3000" data-words='["Technology", "Programming", "Web Development", "Games Design", "Artificial Intelligence"]'></span>
+                </p>
+                <a href="courses.html" class="btn-primary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Section A: What you will learn -->
+    <div id="home-a">
+        <div class="container">
+            <h1 class="title">What you will learn...</h1>
+            <div class="line"></div>
+            <p class="subtitle">TeachTech will allow you learn a wide variety of technologies ranging from web development to games design to artificial Intelligence</p>
+
+            <div class="learn-items">
+                <div>
+                    <i class="fas fa-wifi fa-4x"></i>
+                    <h3>Web Development</h3>
+                    <p>You will learn languages such as HTML5, CSS3 and JavaScript, and learn technologies such as ReactJS, AngularJS and VueJS</p>
+                </div>
+
+                <div>
+                    <i class="fas fa-gamepad fa-4x"></i>
+                    <h3>Games Design</h3>
+                    <p>You will learn languages such as C++, C# and Python, and learn technologies such as Unreal Engine 4, Unity and PyGame</p>
+                </div>
+
+                <div>
+                    <i class="fas fa-robot fa-4x"></i>
+                    <h3>Web Development</h3>
+                    <p>You will learn languages such as Python and R, and learn technologies such as Scikit-Learn, TensorFlow and PyTorch</p>
+                </div>
+
+                <div>
+                    <i class="fas fa-globe-americas fa-4x"></i>
+                    <h3>Scripting</h3>
+                    <p>You will learn languages such as Python, and learn technologies such as the Requests library, Beautiful Soup, Selenium and Scrapy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     
-    
-    <script src="js/app.bundle.js"></script>
+    <!-- <script src="js/app.bundle.js"></script> -->
+    <script src="./js/typewriter.js"></script>
 </body>
 </html>
