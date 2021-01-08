@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 
-.flex-even * {
+.flex-even > * {
   flex-grow: 1;
 }
 
@@ -440,7 +440,7 @@
   margin: 1.25rem auto;
 }
 
-.btn-primary, .btn-secondary, .btn-dark, .btn-medium, .btn-light {
+.btn, .btn-primary, .btn-secondary, .btn-dark, .btn-medium, .btn-light {
   display: inline-block;
   padding: 0.8rem 2rem;
   transition: all 0.5s;
@@ -546,6 +546,11 @@ p {
   justify-items: center;
   height: 70px;
   width: 100%;
+  z-index: 10;
+}
+
+.header #navbar * {
+  z-index: inherit;
 }
 
 .header #navbar #logo {
@@ -576,6 +581,11 @@ p {
   border: none;
   border-bottom: 3px solid transparent;
   margin-right: 1.5rem;
+  transition: all 0.15s ease;
+}
+
+.header #navbar .nav-options li a:hover {
+  border-color: #666666;
 }
 
 .header #navbar .nav-options li.nav-option-active a {
@@ -591,6 +601,11 @@ p {
   align-items: center;
   text-align: center;
   top: -80px;
+  z-index: 9;
+}
+
+.header #showcase * {
+  z-index: inherit;
 }
 
 .header #showcase h1 {
@@ -656,7 +671,13 @@ p {
 
 #home-b .flex .btn {
   background: transparent;
+  color: #ffffff;
   border: 2px solid #ffffff;
+}
+
+#home-b .flex .btn:hover {
+  border-color: #333333;
+  color: #333333;
 }
 
 #home-c {
@@ -718,6 +739,11 @@ p {
 #footer .grid .site-links li a {
   font-size: 18px;
   color: #ffffff;
+  transition: color 0.15s ease;
+}
+
+#footer .grid .site-links li a:hover {
+  color: #b52e2a;
 }
 
 #footer .grid .social-media a {
@@ -728,6 +754,15 @@ p {
 
 #footer .grid .social-media a:last-child {
   padding-right: 0;
+}
+
+#footer .grid .social-media a i {
+  transition: all 0.3s ease;
+}
+
+#footer .grid .social-media a i:hover {
+  opacity: 0.7;
+  transform: scale(1.25, 1.25);
 }
 
 #footer .grid .newsletter p {

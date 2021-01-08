@@ -97,6 +97,8 @@
 }
 
 .btn {
+    @extend %btn-shared;
+
     &-primary {
         @extend %btn-shared;
         background: $primary-color;
