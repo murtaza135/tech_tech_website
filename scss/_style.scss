@@ -188,3 +188,26 @@ p {
         }
     }
 }
+
+
+// Section C: Website Specs
+#home-c {
+    margin-bottom: 2.5rem;
+
+    .flex {
+        div {
+            margin: 0 2rem;
+
+            h1 {
+                font-size: 35px;
+                margin-bottom: 0;
+                color: $primary-color;
+            }
+
+            h2 {
+                font-size: 22px;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

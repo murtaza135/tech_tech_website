@@ -647,3 +647,22 @@ p {
   background: transparent;
   border: 2px solid #ffffff;
 }
+
+#home-c {
+  margin-bottom: 2.5rem;
+}
+
+#home-c .flex div {
+  margin: 0 2rem;
+}
+
+#home-c .flex div h1 {
+  font-size: 35px;
+  margin-bottom: 0;
+  color: #b52e2a;
+}
+
+#home-c .flex div h2 {
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
