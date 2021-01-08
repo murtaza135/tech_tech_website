@@ -10,17 +10,19 @@
     flex-direction: column;
 }
 
-// .flex-half-split {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     text-align: center;
-// }
+.flex-even {
+    * {
+        flex-grow: 1;
+    }
+}
 
 
 // Grid
 .grid {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
 }
 
 

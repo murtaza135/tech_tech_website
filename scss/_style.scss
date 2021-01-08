@@ -37,7 +37,8 @@ p {
 
 // Header
 .header {
-    background: url("../img/showcase/showcase.jpg");
+    background: url("../img/showcase/showcase.jpg")
+    no-repeat top center / cover;
     color: #ffffff;
     top: 0;
     height: 100vh;
@@ -50,7 +51,7 @@ p {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.7);
     }
 
     * {
@@ -208,6 +209,84 @@ p {
                 font-size: 22px;
                 margin-bottom: 1rem;
             }
+        }
+    }
+}
+
+#footer {
+    position: relative;
+    background: url("../img/showcase/showcase.jpg")
+    no-repeat 50% center / cover;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    * {
+        z-index: 10;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 6rem;
+
+        .website-info {
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .site-links {
+            li {
+                padding: 0.4rem 0 0.2rem;
+                border: none;
+                border-bottom: 1px solid $medium-color;
+
+                a {
+                    font-size: 18px;
+                    color: #ffffff;
+                }
+            }
+        }
+
+        .social-media {
+            a {
+                color: $primary-color;
+                padding-right: 1rem;
+                font-size: 18px;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .newsletter {
+            p {
+                font-size: 18px;
+            }
+
+            input[type="email"] {
+                width: 100%;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+                outline: none;
+                font-size: 14px;
+            }
+        }
+
+        .copyright {
+            margin: 3rem 0 1.5rem;
+            grid-column: 1 / span 4;
         }
     }
 }
