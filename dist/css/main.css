@@ -1,4 +1,192 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.lb-loader, .lightbox {
+  text-align: center;
+  line-height: 0;
+  position: absolute;
+  left: 0;
+}
+
+body.lb-disable-scrolling {
+  overflow: hidden;
+}
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #000;
+  filter: alpha(Opacity=80);
+  opacity: .8;
+  display: none;
+}
+
+.lightbox {
+  width: 100%;
+  z-index: 10000;
+  font-weight: 400;
+  outline: 0;
+}
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 3px;
+  border: 4px solid #fff;
+}
+
+.lightbox a img {
+  border: none;
+}
+
+.lb-outerContainer {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-loader {
+  top: 43%;
+  height: 25%;
+  width: 100%;
+}
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(../images/loading.gif) no-repeat;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.lb-container > .nav {
+  left: 0;
+}
+
+.lb-nav a {
+  outline: 0;
+  background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==);
+}
+
+.lb-next, .lb-prev {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(../images/prev.png) left 48% no-repeat;
+  filter: alpha(Opacity=0);
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.lb-nav a.lb-prev:hover {
+  filter: alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(../images/next.png) right 48% no-repeat;
+  filter: alpha(Opacity=0);
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.lb-nav a.lb-next:hover {
+  filter: alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
+
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+  color: #4ae;
+}
+
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999;
+}
+
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(../images/close.png) top right no-repeat;
+  text-align: right;
+  outline: 0;
+  filter: alpha(Opacity=70);
+  opacity: .7;
+  transition: opacity .2s;
+}
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: alpha(Opacity=100);
+  opacity: 1;
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -513,15 +701,23 @@ p {
   margin-bottom: 0.5rem;
 }
 
-.header {
+.header-main {
   background: url("../img/showcase/showcase.jpg") no-repeat top center/cover;
+  height: 100vh;
+}
+
+.header-inner {
+  background: url("../img/showcase/showcase.jpg") no-repeat top center/cover;
+  height: 100vh;
+}
+
+.header-main, .header-inner {
   color: #ffffff;
   top: 0;
-  height: 100vh;
   width: 100%;
 }
 
-.header::before {
+.header-main::before, .header-inner::before {
   content: "";
   position: absolute;
   top: 0;
@@ -531,15 +727,15 @@ p {
   background: rgba(0, 0, 0, 0.7);
 }
 
-.header * {
+.header-main *, .header-inner * {
   z-index: 10;
 }
 
-.header .container {
+.header-main .container, .header-inner .container {
   height: 100%;
 }
 
-.header #navbar {
+.header-main #navbar, .header-inner #navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -549,33 +745,33 @@ p {
   z-index: 10;
 }
 
-.header #navbar * {
+.header-main #navbar *, .header-inner #navbar * {
   z-index: inherit;
 }
 
-.header #navbar #logo {
+.header-main #navbar #logo, .header-inner #navbar #logo {
   margin-left: 2rem;
 }
 
-.header #navbar #logo a {
+.header-main #navbar #logo a, .header-inner #navbar #logo a {
   color: #ffffff;
   font-size: 28px;
   font-weight: 500;
 }
 
-.header #navbar #logo a .logo-color {
+.header-main #navbar #logo a .logo-color, .header-inner #navbar #logo a .logo-color {
   color: #b52e2a;
   font-weight: 700;
 }
 
-.header #navbar .nav-options {
+.header-main #navbar .nav-options, .header-inner #navbar .nav-options {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.header #navbar .nav-options li a {
+.header-main #navbar .nav-options li a, .header-inner #navbar .nav-options li a {
   color: #ffffff;
   padding: 0.75rem 0.5rem 0.4rem;
   border: none;
@@ -584,15 +780,15 @@ p {
   transition: all 0.15s ease;
 }
 
-.header #navbar .nav-options li a:hover {
+.header-main #navbar .nav-options li a:hover, .header-inner #navbar .nav-options li a:hover {
   border-color: #666666;
 }
 
-.header #navbar .nav-options li.nav-option-active a {
+.header-main #navbar .nav-options li.nav-option-active a, .header-inner #navbar .nav-options li.nav-option-active a {
   border-color: #b52e2a;
 }
 
-.header #showcase {
+.header-main #showcase, .header-inner #showcase {
   position: relative;
   height: 100%;
   display: flex;
@@ -604,17 +800,17 @@ p {
   z-index: 9;
 }
 
-.header #showcase * {
+.header-main #showcase *, .header-inner #showcase * {
   z-index: inherit;
 }
 
-.header #showcase h1 {
+.header-main #showcase h1, .header-inner #showcase h1 {
   color: #ffffff;
   font-size: 50px;
   font-weight: 300;
 }
 
-.header #showcase p {
+.header-main #showcase p, .header-inner #showcase p {
   color: #ffffff;
   font-size: 28px;
 }
@@ -697,6 +893,21 @@ p {
 #home-c .flex div h2 {
   font-size: 22px;
   margin-bottom: 1rem;
+}
+
+.lightbox-images .grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.lightbox-images .grid .img {
+  height: 200px;
+  width: auto;
+  background: transparent no-repeat center / cover;
+  transition: opacity 0.1s ease;
+}
+
+.lightbox-images .grid .img:hover {
+  opacity: 0.7;
 }
 
 #footer {
