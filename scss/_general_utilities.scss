@@ -1,11 +1,21 @@
 // Flex
 .flex {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .flex-column {
     flex-direction: column;
 }
+
+// .flex-half-split {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+// }
 
 
 // Grid

@@ -5,12 +5,19 @@
 
 
 // Text
-.title {
+.title-1 {
     font-size: 2rem;
     display: block;
     text-align: center;
     font-weight: 100;
     text-transform: uppercase;
+}
+
+.title-2 {
+    font-size: 2rem;
+    display: block;
+    text-align: left;
+    font-weight: 100;
 }
 
 .subtitle {
