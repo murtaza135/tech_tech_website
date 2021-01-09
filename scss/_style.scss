@@ -271,6 +271,114 @@ p {
 }
 
 
+// Courses-A:
+#courses {
+    &-a {
+        .grid {
+            text-align: center;
+
+            .card {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                img {
+                    width: 200px;
+                    height: auto;
+                    margin-bottom: 1rem;
+
+                    &.enlarge {
+                        width: 300px;
+                    }
+                }
+
+                p {
+                    margin-bottom: 1.5rem;
+                }
+                
+                .course-price {
+                    grid-template-columns: repeat((2, 1fr));
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    grid-column-gap: 1.5rem;
+                    
+
+                    hr {
+                        margin-bottom: 1rem;
+                        grid-column: 1 / span 2;
+                    }
+
+                    h2 {
+                        color: $primary-color;
+                        position: relative;
+                        top: 5px;
+                    }
+
+                    .btn {
+                        margin-right: 1.5rem;
+                        border: 1px solid $medium-color;
+                        background: transparent;
+                        color: $primary-color;
+                        font-weight: bold;
+
+                        &:hover {
+                            border-color: $primary-color;
+                            transform: scale(1.15, 1.15);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Teachers-A:
+#teachers {
+    &-a {
+        .teacher-card.grid {
+            text-align: left;
+            align-items: stretch;
+
+            &:nth-child(odd) {
+                grid-template-areas: 
+                    "img content content"
+                ;
+            }
+
+            &:nth-child(even) {
+                grid-template-areas: 
+                    "content content img"
+                ;
+            }
+
+            .img {
+                // background-image and background-position: is found on the actual element, as it differs for each element
+
+                grid-area: img;
+                height: 275px;
+                width: auto;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0 1rem;
+                border-radius: 50%;
+            }
+
+            .content {
+                grid-area: content;
+                padding: 1rem 0;
+                margin: 0 1rem;
+            }
+        }
+    }
+}
+
+
+// Contact-A
+
 
 
 
@@ -357,6 +465,10 @@ p {
                 margin-bottom: 1rem;
                 outline: none;
                 font-size: 14px;
+            }
+
+            input[type="submit"] {
+                width: 100%;
             }
         }
 

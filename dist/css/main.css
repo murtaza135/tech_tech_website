@@ -198,7 +198,16 @@ body.lb-disable-scrolling {
   flex-direction: column;
 }
 
-.flex-even > * {
+.flex-grow > * {
+  flex-grow: 1;
+}
+
+.flex-fill {
+  width: 100%;
+}
+
+.flex-fill > * {
+  width: 100%;
   flex-grow: 1;
 }
 
@@ -588,7 +597,7 @@ body.lb-disable-scrolling {
 }
 
 .text-medium {
-  color: #666666;
+  color: #777777;
 }
 
 .text-light {
@@ -611,7 +620,7 @@ body.lb-disable-scrolling {
 }
 
 .bg-medium {
-  background: #666666;
+  background: #777777;
   color: #f4f4f4;
 }
 
@@ -631,7 +640,7 @@ body.lb-disable-scrolling {
 .btn, .btn-primary, .btn-secondary, .btn-dark, .btn-medium, .btn-light {
   display: inline-block;
   padding: 0.8rem 2rem;
-  transition: all 0.5s;
+  transition: all 0.4s;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -653,7 +662,7 @@ body.lb-disable-scrolling {
 }
 
 .btn-medium {
-  background: #666666;
+  background: #777777;
   color: #f4f4f4;
 }
 
@@ -662,8 +671,36 @@ body.lb-disable-scrolling {
   color: #333333;
 }
 
+.btn-s {
+  padding: 0.5rem 1rem;
+}
+
+.btn-l {
+  padding: 1.5rem 3.2rem;
+}
+
+.btn-xs {
+  padding: 0.5rem 0rem;
+}
+
 *[class^="btn-"]:hover {
   opacity: 75%;
+}
+
+.card {
+  padding: 2rem;
+  background: #f4f4f4;
+  color: #333333;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-2 {
+  padding: 2rem;
+  background: #f4f4f4;
+  color: #333333;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 * {
@@ -785,7 +822,7 @@ p {
 }
 
 .header-main #navbar .nav-options li a:hover, .header-inner #navbar .nav-options li a:hover {
-  border-color: #666666;
+  border-color: #777777;
 }
 
 .header-main #navbar .nav-options li.nav-option-active a, .header-inner #navbar .nav-options li.nav-option-active a {
@@ -914,6 +951,93 @@ p {
   opacity: 0.7;
 }
 
+#courses-a .grid {
+  text-align: center;
+}
+
+#courses-a .grid .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#courses-a .grid .card img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+#courses-a .grid .card img.enlarge {
+  width: 300px;
+}
+
+#courses-a .grid .card p {
+  margin-bottom: 1.5rem;
+}
+
+#courses-a .grid .card .course-price {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  grid-column-gap: 1.5rem;
+}
+
+#courses-a .grid .card .course-price hr {
+  margin-bottom: 1rem;
+  grid-column: 1 / span 2;
+}
+
+#courses-a .grid .card .course-price h2 {
+  color: #b52e2a;
+  position: relative;
+  top: 5px;
+}
+
+#courses-a .grid .card .course-price .btn {
+  margin-right: 1.5rem;
+  border: 1px solid #777777;
+  background: transparent;
+  color: #b52e2a;
+  font-weight: bold;
+}
+
+#courses-a .grid .card .course-price .btn:hover {
+  border-color: #b52e2a;
+  transform: scale(1.15, 1.15);
+}
+
+#teachers-a .teacher-card.grid {
+  text-align: left;
+  align-items: stretch;
+}
+
+#teachers-a .teacher-card.grid:nth-child(odd) {
+  grid-template-areas: "img content content";
+}
+
+#teachers-a .teacher-card.grid:nth-child(even) {
+  grid-template-areas: "content content img";
+}
+
+#teachers-a .teacher-card.grid .img {
+  grid-area: img;
+  height: 275px;
+  width: auto;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 1rem;
+  border-radius: 50%;
+}
+
+#teachers-a .teacher-card.grid .content {
+  grid-area: content;
+  padding: 1rem 0;
+  margin: 0 1rem;
+}
+
 #footer {
   position: relative;
   background: url("../img/showcase/showcase.jpg") no-repeat center center/cover;
@@ -948,7 +1072,7 @@ p {
 #footer .grid .site-links li {
   padding: 0.4rem 0 0.2rem;
   border: none;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #777777;
 }
 
 #footer .grid .site-links li a {
@@ -990,6 +1114,10 @@ p {
   margin-bottom: 1rem;
   outline: none;
   font-size: 14px;
+}
+
+#footer .grid .newsletter input[type="submit"] {
+  width: 100%;
 }
 
 #footer .grid .copyright {

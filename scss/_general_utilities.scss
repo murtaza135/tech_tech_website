@@ -10,8 +10,17 @@
     flex-direction: column;
 }
 
-.flex-even {
+.flex-grow {
     & > * {
+        flex-grow: 1;
+    }
+}
+
+.flex-fill {
+    width: 100%;
+
+    & > * {
+        width: 100%;
         flex-grow: 1;
     }
 }
