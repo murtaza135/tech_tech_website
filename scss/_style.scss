@@ -195,30 +195,33 @@ p {
         justify-content: left;
         text-align: left;
         margin-bottom: -8px;
-        margin-left: -25px;
-        margin-right: 25px;
 
         .image {
             width: 100%;
             margin-right: 3rem;
         }
 
-        .title-2 {
-            font-size: 2.75rem;
-        }
+        .content {
+            padding-right: 2.5rem;
+            padding-bottom: 1.5rem;
 
-        .subtitle {
-            font-size: 1.15rem;
-        }
-
-        .btn {
-            background: transparent;
-            color: #ffffff;
-            border: 2px solid #ffffff;
-
-            &:hover {
-                border-color: $dark-color;
-                color: $dark-color;
+            .title-2 {
+                font-size: 2.75rem;
+            }
+    
+            .subtitle {
+                font-size: 1.15rem;
+            }
+    
+            .btn {
+                background: transparent;
+                color: #ffffff;
+                border: 2px solid #ffffff;
+    
+                &:hover {
+                    border-color: $dark-color;
+                    color: $dark-color;
+                }
             }
         }
     }
@@ -455,6 +458,8 @@ p {
         grid-column-gap: 6rem;
 
         .website-info {
+            margin-top: -10px;
+
             p {
                 font-size: 18px;
             }
@@ -489,6 +494,7 @@ p {
                 }
 
                 i {
+                    margin-bottom: 1rem;
                     transition: all 0.3s ease;
 
                     &:hover {

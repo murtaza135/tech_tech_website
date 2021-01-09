@@ -692,14 +692,14 @@ body.lb-disable-scrolling {
 }
 
 .card {
-  padding: 2rem;
+  padding: 1.5rem 1rem;
   background: #f4f4f4;
   color: #333333;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
 .card-2 {
-  padding: 2rem;
+  padding: 1.5rem 1rem;
   background: #f4f4f4;
   color: #333333;
   border: 1px solid #aaaaaa;
@@ -887,8 +887,6 @@ p {
   justify-content: left;
   text-align: left;
   margin-bottom: -8px;
-  margin-left: -25px;
-  margin-right: 25px;
 }
 
 #home-b .flex .image {
@@ -896,21 +894,26 @@ p {
   margin-right: 3rem;
 }
 
-#home-b .flex .title-2 {
+#home-b .flex .content {
+  padding-right: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+#home-b .flex .content .title-2 {
   font-size: 2.75rem;
 }
 
-#home-b .flex .subtitle {
+#home-b .flex .content .subtitle {
   font-size: 1.15rem;
 }
 
-#home-b .flex .btn {
+#home-b .flex .content .btn {
   background: transparent;
   color: #ffffff;
   border: 2px solid #ffffff;
 }
 
-#home-b .flex .btn:hover {
+#home-b .flex .content .btn:hover {
   border-color: #333333;
   color: #333333;
 }
@@ -1116,6 +1119,10 @@ p {
   grid-column-gap: 6rem;
 }
 
+#footer .footer-grid .website-info {
+  margin-top: -10px;
+}
+
 #footer .footer-grid .website-info p {
   font-size: 18px;
 }
@@ -1147,6 +1154,7 @@ p {
 }
 
 #footer .footer-grid .social-media a i {
+  margin-bottom: 1rem;
   transition: all 0.3s ease;
 }
 
@@ -1174,4 +1182,298 @@ p {
 #footer .footer-grid .copyright {
   margin: 3rem 0 1.5rem;
   grid-column: 1 / span 4;
+}
+
+@media (max-width: 812px) {
+  #home-b .flex {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 975px;
+  }
+  #home-b .flex .image {
+    margin: 0;
+    margin-bottom: 2.75rem;
+  }
+  #home-b .flex .content {
+    padding: 0 2.5rem 3.5rem;
+    margin-top: 5rem;
+    justify-self: center;
+    align-self: center;
+  }
+  .lightbox-images .lightbox-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #courses-a .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #courses-a .courses-grid .card .course-price h2 {
+    margin-left: -1rem;
+  }
+  #courses-a .courses-grid .card .course-price .btn {
+    margin-right: 1.5rem;
+    margin-left: -1.5rem;
+  }
+  #footer .footer-grid {
+    grid-column-gap: 3.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    height: 135px;
+  }
+  .header-main #navbar, .header-inner #navbar {
+    flex-direction: column;
+  }
+  .header-main #navbar #logo, .header-inner #navbar #logo {
+    margin: 1rem 0 1.5rem;
+  }
+  .header-main #navbar .nav-options li a, .header-inner #navbar .nav-options li a {
+    margin: 0;
+    margin-right: 2.5rem;
+  }
+  .header-main #navbar .nav-options li:last-child a, .header-inner #navbar .nav-options li:last-child a {
+    margin-right: 0;
+  }
+  .header-main #showcase, .header-inner #showcase {
+    top: -50px;
+  }
+  #home-a .learn-items.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #home-a .learn-items.grid div {
+    margin-bottom: 1rem;
+  }
+  #home-b .flex {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 500px;
+  }
+  #home-b .flex .image {
+    margin: 0;
+    margin-bottom: 2.75rem;
+  }
+  #home-b .flex .content {
+    padding: 0 2.5rem 3.5rem;
+    margin-top: 5rem;
+    justify-self: center;
+    align-self: center;
+  }
+  #home-c .specs.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #home-c .specs.grid div {
+    margin-bottom: 1rem;
+  }
+  #courses-a .courses-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #teachers-a .teacher-card.grid {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+  #teachers-a .teacher-card.grid:nth-child(odd), #teachers-a .teacher-card.grid:nth-child(even) {
+    grid-template-areas: "img" "content";
+  }
+  #contact-b .contact-info.grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #contact-b .contact-info.grid div {
+    margin-bottom: 2.5rem;
+  }
+  #contact-b .contact-info.grid div:last-child {
+    margin-bottom: 1rem;
+  }
+  #footer .footer-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 3.25rem;
+  }
+  #footer .footer-grid > * {
+    margin: 0 4rem 2rem;
+  }
+  #footer .footer-grid > *:nth-child(4) {
+    margin-bottom: 0;
+  }
+  #footer .footer-grid > *:nth-child(1), #footer .footer-grid > *:nth-child(3) {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #777777;
+  }
+  #footer .footer-grid .copyright {
+    margin: 3rem 0 1.5rem;
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-inner {
+    height: 135px;
+  }
+  .header-main #navbar, .header-inner #navbar {
+    flex-direction: column;
+  }
+  .header-main #navbar #logo, .header-inner #navbar #logo {
+    margin: 1rem 0 1.5rem;
+  }
+  .header-main #navbar .nav-options li a, .header-inner #navbar .nav-options li a {
+    margin: 0;
+    margin-right: 0.5rem;
+  }
+  .header-main #navbar .nav-options li:last-child a, .header-inner #navbar .nav-options li:last-child a {
+    margin-right: 0;
+  }
+  .header-main #showcase, .header-inner #showcase {
+    top: -50px;
+  }
+  #home-a .learn-items.grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #home-a .learn-items.grid div {
+    margin-bottom: 1rem;
+  }
+  #home-b .flex {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+  #home-b .flex .image {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  #home-b .flex .content {
+    padding: 0 2.5rem 3.5rem;
+    margin-top: 0;
+    justify-self: center;
+    align-self: center;
+  }
+  #home-c .specs.grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #home-c .specs.grid div {
+    margin-bottom: 1.5rem;
+  }
+  .lightbox-images .lightbox-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #courses-a .courses-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #teachers-a .teacher-card.grid {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+  #teachers-a .teacher-card.grid:nth-child(odd), #teachers-a .teacher-card.grid:nth-child(even) {
+    grid-template-areas: "img" "content";
+  }
+  #contact-a .contact-form {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "name" "email" "subject" "phone" "message" "submit";
+  }
+  #contact-a .contact-form .contact-submit {
+    width: 100%;
+  }
+  #contact-b .contact-info.grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #contact-b .contact-info.grid div {
+    margin-bottom: 2.5rem;
+  }
+  #contact-b .contact-info.grid div:last-child {
+    margin-bottom: 1rem;
+  }
+  #footer .footer-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #footer .footer-grid > * {
+    margin-bottom: 2rem;
+  }
+  #footer .footer-grid > *:nth-child(4) {
+    margin-bottom: 0;
+  }
+  #footer .footer-grid > *:nth-child(1), #footer .footer-grid > *:nth-child(3) {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #777777;
+  }
+  #footer .footer-grid .copyright {
+    margin: 3rem 0 1.5rem;
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (max-width: 350px) {
+  .header-main #navbar .nav-options li a, .header-inner #navbar .nav-options li a {
+    margin-right: 0.2rem;
+  }
+  .header-main #showcase, .header-inner #showcase {
+    top: -40px;
+  }
+  #courses-a .courses-grid .card {
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+  }
+  #teachers-a .teacher-card.grid .content h1 {
+    font-size: 28px;
+  }
+  #teachers-a .teacher-card.grid .content p {
+    font-size: 17px;
+  }
+}
+
+@media (max-height: 580px) {
+  .header-main #showcase, .header-inner #showcase {
+    top: -50px;
+  }
+  #home-a .learn-items.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #home-a .learn-items.grid div {
+    margin-bottom: 1rem;
+  }
+  #home-c .specs.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #home-c .specs.grid div {
+    margin-bottom: 0.5rem;
+  }
+  #courses-a .courses-grid .card img.enlarge {
+    width: 200px;
+  }
+  #teachers-a .teacher-card.grid {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+  #teachers-a .teacher-card.grid:nth-child(odd), #teachers-a .teacher-card.grid:nth-child(even) {
+    grid-template-areas: "img" "content";
+  }
+  #teachers-a .teacher-card.grid .img {
+    height: 350px;
+  }
+  #contact-b .contact-info.grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #contact-b .contact-info.grid div {
+    margin-bottom: 2.5rem;
+  }
+  #contact-b .contact-info.grid div:last-child {
+    margin-bottom: 1rem;
+  }
+  #footer .footer-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #footer .footer-grid > * {
+    margin: 0 4rem 2rem;
+  }
+  #footer .footer-grid > *:nth-child(4) {
+    margin-bottom: 0;
+  }
+  #footer .footer-grid > *:nth-child(1), #footer .footer-grid > *:nth-child(3) {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #777777;
+  }
+  #footer .footer-grid .copyright {
+    margin: 3rem 0 1.5rem;
+    grid-column: 1 / span 1;
+  }
 }
