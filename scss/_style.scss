@@ -168,15 +168,11 @@ p {
 #home-a {
     margin-bottom: 2.5rem;
 
-    .learn-items {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    .learn-items.grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 2.25rem;
 
         div {
-            margin: 0 2rem;
-
             i {
                 margin-bottom: 0.5rem;
                 color: $primary-color;
@@ -231,11 +227,12 @@ p {
 
 // Home-C: Website Specs
 #home-c {
-    margin-bottom: 2.5rem;
+    .specs.grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 2.25rem;
 
-    .flex {
         div {
-            margin: 0 2rem;
+            // margin: 0 2rem;
 
             h1 {
                 font-size: 35px;
@@ -254,7 +251,7 @@ p {
 
 // Home-D: Lightbox Images
 .lightbox-images {
-    .grid {
+    .lightbox-grid {
         grid-template-columns: repeat(4, 1fr);
 
         .img {
@@ -274,7 +271,7 @@ p {
 // Courses-A:
 #courses {
     &-a {
-        .grid {
+        .courses-grid {
             text-align: center;
 
             .card {
@@ -453,7 +450,7 @@ p {
         z-index: 10;
     }
 
-    .grid {
+    .footer-grid {
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 6rem;
 
