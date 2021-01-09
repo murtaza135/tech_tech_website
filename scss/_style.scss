@@ -378,8 +378,56 @@ p {
 
 
 // Contact-A
+#contact {
+    &-a {
+        .contact-form {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+                "name email"
+                "subject phone"
+                "message message"
+                "submit submit"
+            ;
+            grid-gap: 1.2rem;
 
+            .contact-name { grid-area: name; }
+            .contact-email { grid-area: email; }
+            .contact-subject { grid-area: subject; }
+            .contact-phone { grid-area: phone ; }
+            .contact-message { grid-area: message; }
+            .contact-submit { grid-area: submit; }
 
+            .text-input {
+                padding: 0.4rem 1rem;
+                width: 100%;
+                font-size: 14px;
+                outline: none !important;
+
+            }
+
+            #contact-message-input {
+                padding: 0.75rem 1rem;
+                height: 250px;
+                resize: vertical;
+            }
+
+            .contact-submit {
+                width: 50%;
+                justify-self: center;
+
+                &:hover {
+                    background: $dark-color;
+                }
+            }
+        }
+    }
+
+    &-b {
+        .contact-info.grid {
+            padding: 3rem 0 1.75rem;
+        }
+    }
+}
 
 
 // Footer

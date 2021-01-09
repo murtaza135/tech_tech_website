@@ -31,14 +31,72 @@
     </header>
 
 
-    <!--  -->
-    
+    <!-- Contact A: Contact Form -->
+    <div id="contact-a">
+        <div class="container">
+            <h1 class="title-1 mt-5">Contact Us</h1>
+            <div class="line"></div>
+            <p class="subtitle text-center mb-6">If you have any questions or queries, please do not hesitate to contact us</p>
+
+            <!-- Tidy this up, remove form-controls, only use form-controls to create nice padding between the label and input -->
+            <form class="contact-form grid mb-7">
+                <div class="form-control contact-name">
+                    <label for="contact-name-input"></label>
+                    <input type="text" name="contact-name-input" id="contact-name-input" class="text-input" placeholder="Name">
+                </div>
+                <div class="form-control contact-email">
+                    <label for="contact-email-input"></label>
+                    <input type="email" name="contact-email-input" id="contact-email-input" class="text-input" placeholder="Email">
+                </div>
+                <div class="form-control contact-subject">
+                    <label for="contact-subject-input"></label>
+                    <input type="text" name="contact-subject-input" id="contact-subject-input" class="text-input" placeholder="Subject">
+                </div>
+                <div class="form-control contact-phone">
+                    <label for="contact-phone-input"></label>
+                    <input type="text" name="contact-phone-input" id="contact-phone-input" class="text-input" placeholder="Phone Number">
+                </div>
+                <div class="form-control contact-message">
+                    <label for="contact-message-input"></label>
+                    <textarea type="text" name="contact-message-input" id="contact-message-input" class="text-input contact-message" placeholder="Enter message here..."></textarea>
+                </div>
+                <input type="submit" value="Submit" class="contact-submit btn-primary">
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Contact B: Company Information -->
+    <div id="contact-b" class="bg-primary">
+        <div class="container">
+            <div class="contact-info grid text-center">
+                <div>
+                    <i class="fas fa-envelope fa-3x mb-3"></i>
+                    <h2>Email</h2>
+                    <p class="subtitle">teachtech@gmail.com</p>
+                </div>
+
+                <div>
+                    <i class="fas fa-phone-alt fa-3x mb-3"></i>
+                    <h2>Phone</h2>
+                    <p class="subtitle">+44 78903 4324</p>
+                </div>
+
+                <div>
+                    <i class="fas fa-map-marker-alt fa-3x mb-3"></i>
+                    <h2>Address</h2>
+                    <p class="subtitle px-6">121 Manor Close, Donnigton Ash, BS37 4FJ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- Footer -->
     <footer id="footer">
         <div class="container">
-            <div class="grid mt-5">
+            <div class="grid mt-6">
                 <div class="website-info">
                     <h1>Teach<span class="text-primary">Tech</span></h1>
                     <p>Our excellent teachers always do their best when teaching. Join us and advance your computing career! You won't regret it!</p>
