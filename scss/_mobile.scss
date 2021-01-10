@@ -108,7 +108,7 @@
             flex-direction: column;
             margin: 0;
             width: 100%;
-            height: 500px;
+            height: auto;
 
             .image {
                 margin: 0;
@@ -117,10 +117,9 @@
 
             .content {
                 padding: 0 2.5rem 3.5rem;
-                margin-top: 5rem;
+                margin-top: 0;
                 justify-self: center;
                 align-self: center;
-
             }
         }
     }
@@ -343,9 +342,10 @@
     #footer {
         .footer-grid {
             grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: 2rem;
 
             & > * {
-                margin-bottom: 2rem;
+                margin: 0 0.8rem 2rem;
             }
 
             & > *:nth-child(4) {
@@ -415,7 +415,7 @@
 
 
 // Landscape
-@media(max-height: 580px) {
+@media(max-height: 450px) {
     .header {
         &-main, &-inner {
             #showcase {

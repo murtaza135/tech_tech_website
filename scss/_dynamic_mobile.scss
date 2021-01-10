@@ -1,0 +1,35 @@
+@media(max-width: 812px) {
+    #course-form {
+        .course-form-grid {
+            width: 80%;
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    #course-form {
+        .course-form-grid {
+            width: 100%;
+
+            .course-details {
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                strong:first-child {
+                    margin-bottom: 0.75rem;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 350px) {
+    #course-form {
+        .course-form-grid {
+            margin: 0 0 2rem;
+            border: none;
+            border-top: 1px solid #aaaaaa;
+            border-radius: 0;
+        }
+    }
+}
