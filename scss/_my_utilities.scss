@@ -14,6 +14,13 @@
     font-weight: 100;
 }
 
+.title-3 {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    font-weight: 100;
+}
+
 .subtitle {
     font-size: 1.3rem;
 }
@@ -77,6 +84,14 @@
     background: $primary-color;
     display: block;
     margin: 1.25rem auto;
+}
+
+.v-line {
+    width: 2px;
+    height: 2rem;
+    background: $medium-color;
+    display: block;
+    margin: 0 auto;
 }
 
 

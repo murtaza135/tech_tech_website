@@ -584,6 +584,13 @@ body.lb-disable-scrolling {
   font-weight: 100;
 }
 
+.title-3 {
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  font-weight: 100;
+}
+
 .subtitle {
   font-size: 1.3rem;
 }
@@ -639,6 +646,14 @@ body.lb-disable-scrolling {
   background: #b52e2a;
   display: block;
   margin: 1.25rem auto;
+}
+
+.v-line {
+  width: 2px;
+  height: 2rem;
+  background: #777777;
+  display: block;
+  margin: 0 auto;
 }
 
 .btn, .btn-primary, .btn-secondary, .btn-dark, .btn-medium, .btn-light {
@@ -705,6 +720,78 @@ body.lb-disable-scrolling {
   border: 1px solid #aaaaaa;
   border-radius: 5px;
   margin-bottom: 1rem;
+}
+
+.alert, .alert-primary, .alert-secondary, .alert-dark, .alert-medium, .alert-light, .alert-success, .alert-warning, .alert-danger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  background-color: #bbbbbb;
+  color: #000000;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.alert .alert-message, .alert-primary .alert-message, .alert-secondary .alert-message, .alert-dark .alert-message, .alert-medium .alert-message, .alert-light .alert-message, .alert-success .alert-message, .alert-warning .alert-message, .alert-danger .alert-message {
+  flex-grow: 1;
+}
+
+.alert .alert-close, .alert-primary .alert-close, .alert-secondary .alert-close, .alert-dark .alert-close, .alert-medium .alert-close, .alert-light .alert-close, .alert-success .alert-close, .alert-warning .alert-close, .alert-danger .alert-close {
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+.alert .alert-close:hover, .alert-primary .alert-close:hover, .alert-secondary .alert-close:hover, .alert-dark .alert-close:hover, .alert-medium .alert-close:hover, .alert-light .alert-close:hover, .alert-success .alert-close:hover, .alert-warning .alert-close:hover, .alert-danger .alert-close:hover {
+  color: #000000;
+}
+
+.alert-primary {
+  background: #b52e2a;
+  color: #f4f4f4;
+}
+
+.alert-secondary {
+  background: #297275;
+  color: #f4f4f4;
+}
+
+.alert-dark {
+  background: #333333;
+  color: #f4f4f4;
+}
+
+.alert-dark .alert-close:hover {
+  color: #777777;
+}
+
+.alert-medium {
+  background: #777777;
+  color: #f4f4f4;
+}
+
+.alert-light {
+  background: #f4f4f4;
+  color: #333333;
+}
+
+.alert-success {
+  background: #4cb240;
+  color: #f4f4f4;
+}
+
+.alert-warning {
+  background: #f7a510;
+  color: #333333;
+}
+
+.alert-danger {
+  background: #ff4428;
+  color: #333333;
 }
 
 * {
@@ -1182,6 +1269,38 @@ p {
 #footer .footer-grid .copyright {
   margin: 3rem 0 1.5rem;
   grid-column: 1 / span 4;
+}
+
+#course-form .course-form-grid {
+  grid-template-columns: repeat(1, 1fr);
+  width: 50%;
+  margin: 0 auto 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#course-form .course-form-grid .course-details {
+  justify-content: space-evenly;
+}
+
+#course-form .course-form-grid .text-input {
+  border: none;
+  border-bottom: 2px solid #b52e2a;
+  font-size: 1.2rem;
+  padding: 0 0.75rem 0.75rem;
+  background: #f4f4f4;
+  color: #333333;
+  outline: none !important;
+  margin-bottom: 1rem;
+}
+
+#course-form .course-form-grid .btn {
+  transition: all 0.4s ease;
+}
+
+#course-form .course-form-grid .btn:hover {
+  background: #333333;
 }
 
 @media (max-width: 812px) {

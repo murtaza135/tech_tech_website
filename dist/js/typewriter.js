@@ -63,9 +63,12 @@ document.addEventListener('DOMContentLoaded', init);
 // Init App
 function init() {
     const txtElement = document.querySelector('.text-typer');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
 
-    // Init TypeWriter
-    new TypeWriter(txtElement, words, wait);
+    if (txtElement) {
+        const words = JSON.parse(txtElement.getAttribute('data-words'));
+        const wait = txtElement.getAttribute('data-wait');
+    
+        // Init TypeWriter
+        new TypeWriter(txtElement, words, wait);
+    }
 }
